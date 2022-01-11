@@ -1,0 +1,242 @@
+:root{
+    --blanco:#ffffff;
+    --negro:#212121;
+    --amarillo:#ffc107;
+    --amarillo1: rgb(238, 255, 0);
+    --gris:#757575;
+    --grisbajito:#b6b6b6;
+    --grisbajo: rgb(161, 161, 161);
+    --grisfuerte: rgb(61, 61, 61);
+}
+html{
+    font-size: 65.5%;
+}
+body{
+    font-size: 16px;
+    font-family:'Source Sans Pro', sans-serif;
+    background-image: linear-gradient(to top, var(--grisfuerte)0%, var(--negro)100%);
+}
+header{
+    font-family: 'Consolador';
+}
+h1{
+    font-size: 2.8rem;
+    color:var(--amarillo)
+}
+h2{
+    font-size: 3.8rem;
+    color: var(--grisbajito);
+}
+p{
+    color: var(--blanco);
+}
+h3{
+    font-size: 1.8rem;
+}
+h4{
+    font-size: 2rem;
+    color: var(--blanco);
+}
+h1, h2, h3, h4{
+    text-align: center;
+}
+header{
+    margin: auto;
+    padding: auto;
+}
+.flex{
+    display: flex;
+}
+.aliear-derecha{
+    justify-content: flex-end;
+}
+.ancho{
+    width: 100%;
+}
+@media(min-width:768px){
+    .ancho{
+          width: auto;
+    }
+}
+.nav-bg{
+    background-color: var(--grisfuerte);
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.nave-principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media (mind-width:768px){
+    .nave-principal{
+          flex-direction: column;
+          justify-content: space-between;
+    }
+}
+.nave-principal a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--blanco);
+    font-weight: 700;
+    padding: 1rem;
+
+}
+.nave-principal a:hover{
+    background-color: var(--amarillo);
+    color: var(--negro);
+}
+.heroe{
+    background-image: url(../IMG/marvel-vs-dc-aqui-respondemos-la-eterna-duda-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 48rem;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
+}
+.contenido-heroe{
+    position: absolute;
+    color: var(--blanco);
+    background-color: rgba,(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-heroe h2,
+.contenido-heroe p{
+    color: var(--blanco);
+}
+img{
+    border-radius: 50%;
+}
+.boton{
+    background-color: var(--gris);
+    color: var(--blanco);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 90%;
+    border: none;
+    width: 10rem;
+}
+@media(min-windht:768px){
+    .boton{
+        width: auto;
+    }
+}
+.sombra{
+    box-shadow: 7px 11px 23px -2px rgba(0,0,0,0.4);
+    background-color: var(--negro);
+    border-radius: 2rem;
+    padding: 2rem;
+}
+.servicios{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+@media(mind-widht:768px){
+    .servicios{
+          display: grid;
+          grid-template-columns: repeat(3 1fr);
+          column-gap: 1rem;
+    }
+}
+.servicio{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio h3{
+    color: var(--amarillo1);
+    font-weight: 400;
+}
+.servicio p{
+    text-align: center;
+    line-height: 2;
+}
+.servicio .imagen{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--gris);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.formulario fieldset{
+    border: none;
+}
+.formulario legend{
+    text-align: center;
+    color: var(--amarillo1);
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+@media (min-widht:768px){
+    .contenedor-campos{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto auto 20rem;
+          column-gap: 1.5rem;
+          margin-bottom: 1.5rem;
+    }
+}
+.campo{
+    margin-bottom: 1rem;
+}
+.campo label{
+    color: var(--grisfuerte);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    border-radius: 20%;
+}
+.campo .input-text{
+    width: 100%;
+    border: none;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+}
+.campo textarea{
+    border-radius: 1rem;
+    display: inline-table;
+    display: block;
+    outline: 0cm;
+    padding: 4rem 20rem;
+}
+.boton-ancho{
+    background-color: var(--grisfuerte);
+    color: var(--grisbajito);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+}
+input{
+    cursor: pointer;
+}
+footer{
+    text-align: center;
+}
